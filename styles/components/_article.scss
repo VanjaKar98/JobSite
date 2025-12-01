@@ -1,0 +1,365 @@
+@use "../abstracts" as *;
+
+.article-test {
+  width: 100%;
+  padding: 2rem;
+  background-color: $background-darkblue;
+  border-radius: 20px;
+  color: $color-palewhite;
+  font-size: 1rem;
+
+  @include flexbox-column($justify: flex-start, $align: flex-start);
+  gap: 1.2rem;
+
+  &__logo-container {
+    @include flexbox-row($justify: flex-start, $align: center);
+    gap: 1rem;
+
+    span.logo {
+      width: 60px;
+      height: 60px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    color: $color-palewhite;
+  }
+
+  &__main {
+    font-size: 1.6rem;
+    color: $color-white;
+  }
+
+  &__results {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    padding-bottom: 1rem;
+  }
+
+  &__numbers {
+    width: 100%;
+    @include flexbox-row($justify: flex-start, $align: flex-start);
+    gap: 2rem;
+
+    &--first {
+      @include flexbox-column($justify: flex-start, $align: flex-start);
+      gap: 0.8rem;
+
+      span:first-of-type {
+        font-size: 1.6rem;
+        color: $color-white;
+      }
+    }
+    &--second {
+      @extend .article-test__numbers--first;
+      gap: 0.8rem;
+    }
+  }
+  &:nth-of-type(2) {
+    background-color: $background-darkgreen;
+  }
+}
+
+.article-jobs {
+  padding: 2rem;
+  border: 1px solid $border-lightgrey;
+  border-radius: 20px;
+  color: $color-lightgrey;
+  font-size: 1rem;
+
+  @include flexbox-column($justify: flex-start, $align: center);
+  gap: 1.2rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $background-palegrey;
+  }
+
+  &__logo {
+    border: 1px solid $border-lightgrey;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__company {
+    width: 100%;
+    @include flexbox-row($justify: center, $align: center);
+    gap: 0.8rem;
+  }
+
+  &__position {
+    color: $color-black;
+  }
+
+  &__spot {
+    font-size: 0.8rem;
+    color: $color-darkred;
+    border: 1px solid $color-darkred;
+    background-color: $background-lightred;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+  }
+
+  &__pref {
+    @include flexbox-row($justify: center, $align: center);
+    gap: 10px;
+
+    &--item {
+      @extend .article-jobs__spot;
+      color: $color-lightgreen;
+      border-color: $border-lightgreen;
+      background-color: $background-lightgreen;
+    }
+
+    &--location,
+    &--arrangement {
+      @extend .article-jobs__spot;
+      color: $color-lightgreen;
+      border-color: $border-lightgreen;
+      background-color: $background-lightgreen;
+    }
+  }
+}
+
+.job-article {
+  position: relative;
+  width: 100%;
+  @include flexbox-row($justify: center, $align: center);
+  gap: 30px;
+  border: 1px solid $border-lightgrey;
+  border-radius: 20px;
+  padding: 1.5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 85%;
+    background-color: $background-lightgrey;
+  }
+
+  &__company {
+    width: 45%;
+    @include flexbox-column($justify: space-between, $align: center);
+    gap: 1.2rem;
+    padding: 1rem;
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+  &__type {
+    @extend .job-article__company;
+    align-items: flex-start;
+
+    &--duration {
+      width: 100%;
+      @include flexbox-column($justify: flex-start, $align: flex-start);
+      border-bottom: 1px solid $border-lightgrey;
+      padding-bottom: 1rem;
+      gap: 1.2rem;
+
+      .article-jobs__type {
+        @extend .article-jobs__spot;
+        color: $color-lightgrey;
+        border-color: $border-palegrey;
+        background-color: $background-palegrey;
+      }
+    }
+
+    &--location {
+      @extend .job-article__type--duration;
+    }
+
+    &--post {
+      @extend .job-article__type--duration;
+      border: none;
+    }
+  }
+}
+
+.article-recent {
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid $border-lightgrey;
+  border-radius: 20px;
+  color: $color-lightgrey;
+  font-size: 1rem;
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $background-palegrey;
+  }
+
+  @include flexbox-row($justify: flex-start, $align: center);
+  gap: 1rem;
+
+  &__logo {
+    flex: 0 0 auto;
+    border: 1px solid $border-lightgrey;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__company {
+    @include flexbox-column($justify: flex-start, $align: flex-start);
+    gap: 0.8rem;
+
+    &--intro {
+      @include flexbox-row($justify: flex-start, $align: center);
+      gap: 0.8rem;
+    }
+  }
+
+  &__position {
+    color: $color-black;
+  }
+
+  &__info {
+    margin-left: auto;
+    width: 240px;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    @include flexbox-column($justify: flex-start, $align: flex-end);
+    gap: 0.6rem;
+  }
+
+  &__spot {
+    font-size: 0.8rem;
+    color: $color-lightblue;
+    border: 1px solid $border-paleblue;
+    background-color: $background-paleblue;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+  }
+
+  &__pref {
+    width: 100%;
+    @include flexbox-row($justify: flex-end, $align: center);
+    gap: 0.5rem;
+    justify-self: flex-end;
+
+    &--location,
+    &--arrangement {
+      @extend .article-jobs__spot;
+      color: $color-lightgreen;
+      border-color: $border-lightgreen;
+      background-color: $background-lightgreen;
+    }
+  }
+}
+
+.article-li {
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .job-article {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 22rem;
+      height: 1px;
+      width: calc(100% - 70px);
+    }
+
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__company {
+      width: 100%;
+    }
+
+    &__type {
+      @extend .job-article__company;
+    }
+  }
+  h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .article-recent {
+    flex-direction: column;
+  }
+
+  .article-recent__company {
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .article-recent__info {
+    align-items: center;
+
+    margin-left: unset;
+  }
+  .article-recent__pref {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .article-test {
+    font-size: 0.8rem;
+
+    .article-test__title {
+      font-size: 1.2rem;
+    }
+
+    .article-test__main {
+      font-size: 1.4rem;
+    }
+
+    span:first-of-type {
+      font-size: 1.4rem;
+    }
+  }
+
+  .article-jobs__company,
+  .article-recent__company--intro {
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}

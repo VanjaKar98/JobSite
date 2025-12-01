@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find job</title>
+    <link rel="stylesheet" href="../styles/dist/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <nav class="header__logo-container">
+          <a class="header__logo" href="../Homepage/index.html"
+            ><img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f75553_logo-new.svg"
+              alt="devtask"
+          /></a>
+          <a href="mailto:someone@example.com" class="link-contact">Contact</a>
+        </nav>
+        <a
+          href="../Postjobpage/index.html"
+          target="_blank"
+          class="link-post--small"
+          ><img
+            src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7553b_add-circle.svg"
+            alt=""
+          />Post a job</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="filter">
+        <h1></h1>
+        <h2>Find your dream job</h2>
+        <ul class="filter__list">
+          <li>
+            <button data-technology="all" class="btn-filter active">All</button>
+          </li>
+          <li>
+            <button data-technology="c#" class="btn-filter">C#</button>
+          </li>
+          <li>
+            <button data-technology="c++" class="btn-filter">C++</button>
+          </li>
+          <li>
+            <button data-technology="flutter" class="btn-filter">
+              Flutter
+            </button>
+          </li>
+          <li>
+            <button data-technology="htmlcss" class="btn-filter">
+              HTML/CSS
+            </button>
+          </li>
+          <li>
+            <button data-technology="java" class="btn-filter">Java</button>
+          </li>
+          <li>
+            <button data-technology="javascript" class="btn-filter">
+              JavaScript
+            </button>
+          </li>
+          <li>
+            <button data-technology="kotlin" class="btn-filter">Kotlin</button>
+          </li>
+          <li>
+            <button data-technology="machinelearning" class="btn-filter">
+              Machine Learning
+            </button>
+          </li>
+          <li>
+            <button data-technology="next" class="btn-filter">Next.js</button>
+          </li>
+          <li>
+            <button data-technology="node" class="btn-filter">Node.js</button>
+          </li>
+          <li>
+            <button data-technology="php" class="btn-filter">PHP</button>
+          </li>
+          <li>
+            <button data-technology="python" class="btn-filter">Python</button>
+          </li>
+          <li>
+            <button data-technology="react" class="btn-filter">React</button>
+          </li>
+          <li>
+            <button data-technology="reactnative" class="btn-filter">
+              React Native
+            </button>
+          </li>
+          <li>
+            <button data-technology="ruby" class="btn-filter">
+              Ruby on Rails
+            </button>
+          </li>
+          <li>
+            <button data-technology="sql" class="btn-filter">SQL</button>
+          </li>
+          <li>
+            <button data-technology="swift" class="btn-filter">SwiftUI</button>
+          </li>
+          <li>
+            <button data-technology="typescript" class="btn-filter">
+              TypeScript
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="recent">
+        <h2>All jobs</h2>
+        <div class="recent__container">
+          <ul class="recent__articles">
+            <template id="article-template">
+              <li class="article-li">
+                <a href="../Jobpage/index.html">
+                  <article class="article-recent">
+                    <span class="article-recent__logo">
+                      <img
+                        src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f75551_company-05.png"
+                        loading="lazy"
+                        alt="logo-img"
+                        class="testimonial__img"
+                      />
+                    </span>
+                    <div class="article-recent__company">
+                      <div class="article-recent__company--intro">
+                        <span class="article-recent__company--intro-name">
+                        </span>
+                        <span>&#8226;</span>
+                        <span
+                          class="article-recent__company--intro-type"
+                        ></span>
+                      </div>
+
+                      <h3 class="article-recent__position"></h3>
+                    </div>
+                    <div class="article-recent__info">
+                      <span class="article-recent__spot"></span>
+                      <ul class="article-recent__pref">
+                        <li class="article-recent__pref--location"></li>
+                        <li class="article-recent__pref--arrangement"></li>
+                      </ul>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            </template>
+          </ul>
+          <div class="recent__post">
+            <p>
+              Work with the most talented and accomplished developers on a
+              freelance, contract, part-time, or full-time basis.
+            </p>
+            <a
+              href="../Postjobpage/index.html"
+              target="_blank"
+              class="link-post--large"
+              ><img
+                src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7553b_add-circle.svg"
+                alt=""
+              />Post a job</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__info">
+        <div class="footer__info--copy">
+          <span>&#169; 2025 Devtask.</span>
+          <a href="../Endsite/index.html">Privacy Policy</a>
+        </div>
+        <div class="footer__info--socials">
+          <a href="../Endsite/index.html">
+            <img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7553c_x.svg"
+              alt="x"
+              class="icon-regular"
+          /></a>
+          <a href="../Endsite/index.html">
+            <img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7554e_instagram.svg"
+              alt="instagram"
+          /></a>
+          <a href="../Endsite/index.html">
+            <img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7554f_youtube.svg"
+              alt="youtube"
+          /></a>
+          <a href="../Endsite/index.html">
+            <img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f75550_linkedin.svg"
+              alt="linkedin"
+          /></a>
+        </div>
+      </div>
+      <div class="footer__made">
+        <div class="footer__made--by">
+          Made by <a href="../Endsite/index.html"> Riffmax</a> & Powered by
+          <a href="../Endsite/index.html">Webflow</a>
+        </div>
+        <div class="footer__made--links">
+          <ul>
+            <li><a href="../Endsite/index.html">Style guide</a></li>
+            <li><a href="../Endsite/index.html">Instructions</a></li>
+            <li><a href="../Endsite/index.html">Changelog</a></li>
+            <li><a href="../Endsite/index.html">Licences</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

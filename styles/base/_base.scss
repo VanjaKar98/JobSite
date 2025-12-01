@@ -1,0 +1,72 @@
+@use "../abstracts" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+  @include flexbox-column($justify: initial, $align: initial);
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+ul,
+li,
+a,
+h1,
+p,
+input,
+textarea,
+button {
+  all: unset;
+}
+
+h1 {
+  width: 30rem;
+  font-size: 2.4rem;
+  color: black;
+  align-self: flex-start;
+  font-weight: 1000;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+label {
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  stroke: currentColor;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+path {
+  stroke: currentColor;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+g {
+  @extend path;
+}

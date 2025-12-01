@@ -1,0 +1,291 @@
+@use "../abstracts" as *;
+
+.testimonials {
+  width: 100%;
+  max-width: 1200px;
+  @include flexbox-column($justify: flex-start, $align: center);
+  gap: 2rem;
+
+  &__articles {
+    @include flexbox-row($justify: space-between, $align: center);
+    gap: 1rem;
+  }
+}
+
+.featured {
+  width: 100%;
+  max-width: 1200px;
+  @include flexbox-column($justify: flex-start, $align: center);
+  gap: 2rem;
+
+  h2 {
+    align-self: flex-start;
+  }
+
+  &__articles {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 1rem;
+  }
+}
+
+.recent {
+  width: 100%;
+  max-width: 1200px;
+  @include flexbox-column($justify: flex-start, $align: center);
+  gap: 2rem;
+
+  &__container {
+    width: 100%;
+    @include flexbox-row($justify: space-between, $align: flex-start);
+    gap: 3rem;
+  }
+
+  &__articles {
+    width: 100%;
+    @include flexbox-column($justify: flex-start, $align: flex-start);
+    gap: 1rem;
+  }
+
+  &__post {
+    position: sticky;
+    top: 3rem;
+    width: 22rem;
+    flex-shrink: 0;
+    border: 1px solid $border-lightgrey;
+    border-radius: 20px;
+    padding: 1rem;
+    line-height: 150%;
+    @include flexbox-column($justify: flex-start, $align: flex-start);
+    gap: 1.2rem;
+  }
+
+  h2 {
+    align-self: flex-start;
+  }
+}
+
+.filter {
+  @extend .featured;
+  align-items: flex-start;
+
+  h1 {
+    display: none;
+  }
+
+  &__list {
+    @include flexbox-row($justify: flex-start, $align: flex-start);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.job {
+  @extend .featured;
+  max-width: 700px;
+  h1 {
+    width: auto;
+  }
+}
+
+.about {
+  @extend .job;
+  align-items: flex-start;
+  width: 100%;
+  line-height: 200%;
+  > *:not(h2, h3, a) {
+    color: grey;
+  }
+
+  h3 {
+    align-self: flex-start;
+  }
+  ul {
+    li {
+      display: block;
+      &::marker {
+        display: block;
+        list-style-type: circle;
+      }
+    }
+  }
+  a {
+    align-self: flex-start;
+  }
+}
+
+.form {
+  @include flexbox-column($justify: flex-start, $align: flex-start);
+  gap: 3rem;
+
+  &__info {
+    @include flexbox-column($justify: flex-start, $align: flex-start);
+    gap: 2rem;
+
+    span {
+      color: $color-lightblue;
+    }
+  }
+  &__input {
+    @include flexbox-column($justify: flex-start, $align: flex-start);
+    gap: 2.5rem;
+
+    width: 100%;
+    border: 1px solid $border-lightgrey;
+    border-radius: 20px;
+    padding: 2.5rem;
+
+    &--item {
+      width: 100%;
+      @include flexbox-column($justify: flex-start, $align: flex-start);
+      gap: 1rem;
+
+      span {
+        color: grey;
+        font-size: 0.9rem;
+      }
+
+      &-radio {
+        @include flexbox-column($justify: flex-start, $align: flex-start);
+        flex-wrap: wrap;
+        gap: 0.8rem;
+
+        span.views {
+          color: $color-lightblue;
+          background-color: $background-paleblue;
+          border: 1px solid $border-paleblue;
+          border-radius: 15px;
+          padding: 0.3rem;
+        }
+      }
+    }
+
+    &--1week {
+      @include flexbox-row($justify: flex-start, $align: center);
+      gap: 5px;
+    }
+    &--4weeks {
+      @extend .form__input--1week;
+    }
+
+    label {
+      span {
+        color: $color-darkred;
+      }
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 3.5rem;
+      border: 1px solid $border-lightgrey;
+      border-radius: 10px;
+      padding-left: 2rem;
+    }
+
+    textarea {
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      min-height: 5rem;
+      border: 1px solid $border-lightgrey;
+      border-radius: 10px;
+      padding-left: 2rem;
+      padding-top: 15px;
+    }
+
+    input[type="radio"] {
+      padding: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $border-lightgrey;
+      border-radius: 5px;
+
+      &:checked {
+        background-color: $background-lightblue;
+      }
+    }
+  }
+  button {
+    align-self: center;
+  }
+  .checkout {
+    align-self: center;
+  }
+}
+
+.end {
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-lightblue2;
+  @include flexbox-row($justify: center, $align: center);
+
+  &__body {
+    @include flexbox-column($justify: space-between, $align: center);
+  }
+
+  h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 1380px) {
+  .feature__articles {
+    grid-template-columns: repeat(auto-fill, minmax(45rem, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
+  .recent__post {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .testimonials__articles {
+    @include flexbox-column($justify: flex-start, $align: flex-start);
+  }
+  .feature__articles {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .end__body {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .featured__articles {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  }
+
+  .filter {
+    font-size: 10px;
+  }
+
+  .form__input {
+    padding: 2.2rem;
+    gap: 2.2rem;
+
+    &--1week {
+      @include flexbox-column($justify: flex-start, $align: flex-start);
+    }
+    &--4weeks {
+      @extend .form__input--1week;
+    }
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  section > h2 {
+    font-size: 1.6rem;
+  }
+}

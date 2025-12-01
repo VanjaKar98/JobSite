@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+
+.link-contact {
+  @include flexbox-row($justify: flex-start, $align: center);
+  padding: 0.5rem 1rem;
+  border: 1px solid $border-black;
+  border-radius: 15px;
+  color: $color-black;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    display: block;
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+.link-browse {
+  @extend .link-contact;
+  padding: 1rem 1.2rem;
+  border-radius: 25px;
+}
+
+.link-find {
+  @extend .link-contact;
+  border: none;
+}
+
+.link-post {
+  &--small {
+    @extend .link-find;
+    @include flexbox-row($justify: center, $align: center);
+    gap: 0.5rem;
+    background-color: $background-lightblue;
+    color: $color-white;
+  }
+
+  &--large {
+    @extend .link-find;
+    @include flexbox-row($justify: center, $align: center);
+    gap: 0.5rem;
+    background-color: $background-lightblue;
+    color: $color-white;
+    padding: 1rem 1.2rem;
+    border-radius: 30px;
+  }
+}
+
+.link-visit {
+  transition: color 0.5s linear;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-lightblue;
+    transition: color 0.5s linear;
+  }
+}

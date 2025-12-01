@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+@use "../components" as *;
+
+.header {
+  width: 100%;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid gray;
+
+  &__container {
+    @include flexbox-row($justify: space-between, $align: center);
+  }
+
+  &__logo-container {
+    @include flexbox-row($justify: space-between, $align: center);
+    gap: 2rem;
+  }
+
+  &__logo:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 960px) {
+  .header {
+    .link-contact {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link rel="stylesheet" href="../styles/dist/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <nav class="header__logo-container">
+          <a class="header__logo" href="./index.html"
+            ><img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f75553_logo-new.svg"
+              alt="devtask"
+          /></a>
+          <a href="mailto:someone@example.com" class="link-contact">Contact</a>
+          <a href="../Findjobpage/index.html" class="link-find">Find jobs</a>
+        </nav>
+        <a href="../Postjobpage/index.html" class="link-post--small"
+          ><img
+            src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7553b_add-circle.svg"
+            loading="lazy"
+            data-wf-id='["31f02331-e2f3-a37c-1bce-866f7a26e53a","5bf4f2a5-8275-f5f3-093e-01709d4fc624"]'
+            data-w-id="5bf4f2a5-8275-f5f3-093e-01709d4fc624"
+            alt=""
+            class="icon-regular hidden-phone"
+          />Post a job</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="testimonials">
+        <h1>The #1 job board for software development</h1>
+        <div class="testimonials__articles">
+          <article class="article-test">
+            <div class="article-test__logo-container">
+              <span class="logo">
+                <img
+                  src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f75551_company-05.png"
+                  alt="logo-img"
+                  class="testimonial__img"
+                />
+              </span>
+              <h2 class="article-test__title">Company XYZ</h2>
+            </div>
+            <p class="article-test__main">
+              ”One of the main advantages of posting jobs on Devtask is the
+              skill level of the applicants. Some of the best talents in our
+              team were found here.”
+            </p>
+            <span class="article-test__name">John Doe, CTO</span>
+            <span class="article-test__results">Results</span>
+            <div class="article-test__numbers">
+              <div class="article-test__numbers--first">
+                <span>3-4x faster</span><span>to find our talents</span>
+              </div>
+              <div class="article-test__numbers--second">
+                <span>+30</span><span>professionals hired</span>
+              </div>
+            </div>
+          </article>
+          <article class="article-test">
+            <div class="article-test__logo-container">
+              <span class="logo">
+                <img
+                  src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f75551_company-05.png"
+                  loading="lazy"
+                  data-wf-id='["03f920ae-b089-78dc-7f82-eea64d6adef5"]'
+                  data-w-id="03f920ae-b089-78dc-7f82-eea64d6adef5"
+                  alt="logo-img"
+                  class="testimonial__img"
+                />
+              </span>
+              <h2 class="article-test__title">Company XYZ</h2>
+            </div>
+            <p class="article-test__main">
+              ”One of the main advantages of posting jobs on Devtask is the
+              skill level of the applicants. Some of the best talents in our
+              team were found here.”
+            </p>
+            <span class="article-test__name">John Doe, CTO</span>
+            <span class="article-test__results">Results</span>
+            <div class="article-test__numbers">
+              <div class="article-test__numbers--first">
+                <span>3-4x faster</span><span>to find our talents</span>
+              </div>
+              <div class="article-test__numbers--second">
+                <span>+30</span><span>professionals hired</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="featured">
+        <h2>Recent jobs</h2>
+        <ul class="featured__articles">
+          <template id="article-template1">
+            <li class="article-li">
+              <a href="../Jobpage/index.html">
+                <article class="article-jobs">
+                  <span class="article-jobs__logo">
+                    <img src="" alt="logo-img" />
+                  </span>
+                  <div class="article-jobs__company">
+                    <span class="article-jobs__company--name"></span>
+                    <span>&#8226;</span>
+                    <span class="article-jobs__company--type"></span>
+                  </div>
+                  <h3 class="article-jobs__position"></h3>
+                  <span class="article-jobs__spot">In the spotlight</span>
+                  <ul class="article-jobs__pref">
+                    <li class="article-jobs__pref--location"></li>
+                    <li class="article-jobs__pref--arrangement"></li>
+                  </ul>
+                </article>
+              </a>
+            </li>
+          </template>
+        </ul>
+      </section>
+
+      <section class="recent">
+        <h2>Featured jobs</h2>
+        <div class="recent__container">
+          <ul class="recent__articles">
+            <template id="article-template2">
+              <li class="article-li">
+                <a href="../Jobpage/index.html">
+                  <article class="article-recent">
+                    <span class="article-recent__logo">
+                      <img
+                        src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f75551_company-05.png"
+                        loading="lazy"
+                        alt="logo-img"
+                        class="testimonial__img"
+                      />
+                    </span>
+                    <div class="article-recent__company">
+                      <div class="article-recent__company--intro">
+                        <span
+                          class="article-recent__company--intro-name"
+                        ></span>
+                        <span>&#8226;</span>
+                        <span
+                          class="article-recent__company--intro-type"
+                        ></span>
+                      </div>
+
+                      <h3 class="article-recent__position"></h3>
+                    </div>
+                    <div class="article-recent__info">
+                      <span class="article-recent__spot">Sep 14,2024</span>
+                      <ul class="article-recent__pref">
+                        <li class="article-recent__pref--location"></li>
+                        <li class="article-recent__pref--arrangement"></li>
+                      </ul>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            </template>
+          </ul>
+          <aside class="recent__post">
+            <p>
+              Work with the most talented and accomplished developers on a
+              freelance, contract, part-time, or full-time basis.
+            </p>
+            <a href="../Postjobpage/index.html" class="link-post--large"
+              ><img
+                src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7553b_add-circle.svg"
+                alt=""
+              />Post a job</a
+            >
+          </aside>
+        </div>
+        <a href="../Findjobpage/index.html" class="link-browse"
+          >Browse all jobs</a
+        >
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__info">
+        <div class="footer__info--copy">
+          <span>&#169; 2025 Devtask.</span>
+          <a href="../Endsite/index.html">Privacy Policy</a>
+        </div>
+        <div class="footer__info--socials">
+          <a href="../Endsite/index.html">
+            <img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7553c_x.svg"
+              alt="x"
+              class="icon-regular"
+          /></a>
+          <a href="../Endsite/index.html">
+            <img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7554e_instagram.svg"
+              alt="instagram"
+          /></a>
+          <a href="../Endsite/index.html">
+            <img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f7554f_youtube.svg"
+              alt="youtube"
+          /></a>
+          <a href="../Endsite/index.html">
+            <img
+              src="https://cdn.prod.website-files.com/66f2f083f5b8de8e38f75505/66f2f083f5b8de8e38f75550_linkedin.svg"
+              alt="linkedin"
+          /></a>
+        </div>
+      </div>
+      <div class="footer__made">
+        <div class="footer__made--by">
+          Made by <a href="../Endsite/index.html"> Riffmax</a> & Powered by
+          <a href="../Endsite/index.html">Webflow</a>
+        </div>
+        <div class="footer__made--links">
+          <ul>
+            <li><a href="../Endsite/index.html">Style guide</a></li>
+            <li><a href="../Endsite/index.html">Instructions</a></li>
+            <li><a href="../Endsite/index.html">Changelog</a></li>
+            <li><a href="../Endsite/index.html">Licences</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

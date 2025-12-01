@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.btn-filter {
+  @include flexbox-row($justify: center, $align: center);
+  padding: 1.2rem 1.5rem;
+  border: 1px solid $border-lightgrey;
+  border-radius: 15px;
+  color: $color-black;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-submit {
+  @include flexbox-row($justify: center, $align: center);
+  width: 100%;
+  padding: 1.2rem 2rem;
+  background: $background-lightblue;
+  border-radius: 30px;
+  color: $color-white;
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.active {
+  background-color: $background-lightblue;
+  color: $color-white;
+}

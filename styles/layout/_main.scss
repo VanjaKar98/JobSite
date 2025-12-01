@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+main {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 2050px;
+  padding: 1.5rem 1rem 10rem;
+  @include flexbox-column($justify: flex-start, $align: center);
+  gap: 4rem;
+  flex-grow: 1;
+}

@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.message-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  @include flexbox-row($justify: center, $align: center);
+  backdrop-filter: grayscale(100%);
+
+  &__message {
+    padding: 2.5rem;
+    border-radius: 5px;
+    color: $color-white;
+    background-color: $background-lightblue;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .message-container__message {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .message-container__message {
+    font-size: 1.2rem;
+  }
+}
