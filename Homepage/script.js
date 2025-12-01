@@ -71,7 +71,7 @@ function renderRecentHandler() {
       job.arrangement;
     jobEl.querySelector("span.article-recent__spot").textContent = new Date(
       job.createdAt
-    ).toLocaleString("en-US", {
+    ).toLocaleString("hr-HR", {
       year: "numeric",
       month: "short",
       day: "2-digit",
