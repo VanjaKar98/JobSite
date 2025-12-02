@@ -7,7 +7,7 @@
   z-index: 100;
   top: 0;
   left: 0;
-  @include flexbox-row($justify: center, $align: center);
+  @include flexbox-row();
   backdrop-filter: grayscale(100%);
 
   &__message {

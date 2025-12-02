@@ -53,7 +53,7 @@ img {
   display: block;
 }
 
-svg {
+svg, g, path {
   width: 100%;
   height: 100%;
   display: block;
@@ -62,7 +62,7 @@ svg {
   pointer-events: none;
 }
 
-path, g {
+path {
   stroke: currentColor;
   fill: currentColor;
   pointer-events: none;
@@ -177,14 +177,6 @@ path, g {
   align-items: center;
   gap: 1rem;
 }
-.article-test__logo-container span.logo {
-  width: 60px;
-  height: 60px;
-}
-.article-test__logo-container span.logo img {
-  width: 100%;
-  height: 100%;
-}
 .article-test__title {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.4);
@@ -195,7 +187,7 @@ path, g {
 }
 .article-test__results {
   width: 100%;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(128, 128, 128);
   padding-bottom: 1rem;
 }
 .article-test__numbers {
@@ -358,18 +350,6 @@ path, g {
   align-items: center;
   gap: 1rem;
 }
-.article-recent__logo {
-  flex: 0 0 auto;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-}
-.article-recent__logo img {
-  width: 100%;
-  height: 100%;
-}
 .article-recent__company {
   display: flex;
   flex-direction: column;
@@ -520,6 +500,24 @@ path, g {
     font-size: 1.2rem;
   }
 }
+.article__logo--no-border, .article__logo--border {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.article__logo--no-border img, .article__logo--border img {
+  width: 100%;
+  height: 100%;
+}
+
+.article__logo--border {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.article__logo--no-border {
+  flex: 0 0 auto;
+}
+
 .header {
   width: 100%;
   padding: 1rem 1rem;

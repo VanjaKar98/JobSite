@@ -62,11 +62,13 @@ svg {
 }
 
 path {
+  @extend svg;
+
   stroke: currentColor;
   fill: currentColor;
   pointer-events: none;
 }
 
 g {
-  @extend path;
+  @extend svg;
 }

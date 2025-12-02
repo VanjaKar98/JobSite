@@ -1,4 +1,4 @@
-const LOGO_IMG = document.querySelector("span.logo>img");
+const LOGO_IMG = document.querySelector("span.article__logo--border>img");
 
 const COMPANY = document.querySelector(".job-article__company--name");
 

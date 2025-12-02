@@ -12,18 +12,8 @@
   gap: 1.2rem;
 
   &__logo-container {
-    @include flexbox-row($justify: flex-start, $align: center);
+    @include flexbox-row($justify: flex-start);
     gap: 1rem;
-
-    span.logo {
-      width: 60px;
-      height: 60px;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
   }
 
   &__title {
@@ -38,7 +28,7 @@
 
   &__results {
     width: 100%;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $border-grey;
     padding-bottom: 1rem;
   }
 
@@ -73,7 +63,7 @@
   color: $color-lightgrey;
   font-size: 1rem;
 
-  @include flexbox-column($justify: flex-start, $align: center);
+  @include flexbox-column($justify: flex-start);
   gap: 1.2rem;
 
   &:hover {
@@ -96,7 +86,7 @@
 
   &__company {
     width: 100%;
-    @include flexbox-row($justify: center, $align: center);
+    @include flexbox-row();
     gap: 0.8rem;
   }
 
@@ -114,7 +104,7 @@
   }
 
   &__pref {
-    @include flexbox-row($justify: center, $align: center);
+    @include flexbox-row();
     gap: 10px;
 
     &--item {
@@ -137,7 +127,7 @@
 .job-article {
   position: relative;
   width: 100%;
-  @include flexbox-row($justify: center, $align: center);
+  @include flexbox-row();
   gap: 30px;
   border: 1px solid $border-lightgrey;
   border-radius: 20px;
@@ -155,7 +145,7 @@
 
   &__company {
     width: 45%;
-    @include flexbox-column($justify: space-between, $align: center);
+    @include flexbox-column($justify: space-between);
     gap: 1.2rem;
     padding: 1rem;
 
@@ -208,29 +198,15 @@
     background-color: $background-palegrey;
   }
 
-  @include flexbox-row($justify: flex-start, $align: center);
+  @include flexbox-row($justify: flex-start);
   gap: 1rem;
-
-  &__logo {
-    flex: 0 0 auto;
-    border: 1px solid $border-lightgrey;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
 
   &__company {
     @include flexbox-column($justify: flex-start, $align: flex-start);
     gap: 0.8rem;
 
     &--intro {
-      @include flexbox-row($justify: flex-start, $align: center);
+      @include flexbox-row($justify: flex-start);
       gap: 0.8rem;
     }
   }
@@ -259,7 +235,7 @@
 
   &__pref {
     width: 100%;
-    @include flexbox-row($justify: flex-end, $align: center);
+    @include flexbox-row($justify: flex-end);
     gap: 0.5rem;
     justify-self: flex-end;
 

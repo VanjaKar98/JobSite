@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+%logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.article__logo {
+  &--border {
+    @extend %logo;
+    border: 1px solid $border-lightgrey;
+  }
+
+  &--no-border {
+    @extend %logo;
+    flex: 0 0 auto;
+  }
+}

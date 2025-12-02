@@ -51,16 +51,3 @@ function handlePostMessage() {
   let messageWindow = document.querySelector(".message-container");
   setTimeout(() => messageWindow.remove(), 2000);
 }
-
-function setData() {
-  FORM[0].value = "Frontend Developer";
-  FORM[1].value = "Varaždin";
-  FORM[2].value = "On-site";
-  FORM[3].value = "Full-time";
-  FORM[4].value = "Hickle, Bailey and Considine";
-  FORM[5].value =
-    "We create mobile applications that solve everyday problems using simple design. We test every feature extensively to ensure smooth performance. We focus on delivering fast, reliable, and secure apps. We work closely with users to add new improvements. We believe that technology should make life easier, not more complicated.";
-  FORM[6].value = "React,   javascript, c++";
-  FORM[7].value = "john@doe.com";
-  FORM[8].value = "https://avatars.githubusercontent.com/u/83152088";
-}
