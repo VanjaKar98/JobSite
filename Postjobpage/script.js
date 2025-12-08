@@ -19,9 +19,6 @@ function formHandler(event) {
   if (!jobData.hasOwnProperty("spotlight")) {
     jobData.spotlight = false;
   }
-
-  console.log(jobData);
-
   postHandler(jobData);
   FORM.reset();
 }

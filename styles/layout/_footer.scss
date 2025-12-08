@@ -28,6 +28,10 @@
     &--copy {
       @include flexbox-row($justify: space-between, $align: center);
       gap: 1rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     &--socials {

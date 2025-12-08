@@ -575,6 +575,9 @@ path {
   align-items: center;
   gap: 1rem;
 }
+.footer__info--copy:hover {
+  cursor: pointer;
+}
 .footer__info--socials {
   display: flex;
   justify-content: space-between;
