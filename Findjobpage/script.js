@@ -121,11 +121,9 @@ function searchParamGet() {
     filterList = [...params.getAll("tech")];
   }
   filterList.forEach((filter) =>
-    FILTER_BTNS.forEach((btn) => {
-      if (btn.dataset.technology === filter) {
-        btn.classList.add("active");
-      }
-    })
+    document
+      .querySelectorAll(`[data-technology="${filter}"]`)
+      .forEach((btn) => btn.classList.add("active"))
   );
 
   if (filterList.length > 0) {
